@@ -1,0 +1,396 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding-top: 70px; /* Offset for fixed header */
+}
+
+.centered-container {
+  max-width: 80%; /* Width of the box */
+  margin: 30px auto; /* Centers the box and adds vertical spacing */
+  background-color: #1A1A1A; /* Dark background for the box */
+  border: 2px solid #333; /* Solid border around the box */
+  padding: 20px; /* Spacing inside the box */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+}
+
+.post-image {
+  width: 100%; /* Ensures it scales responsively */
+  max-width: 500px; /* Maximum width of the image */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures it does not have inline properties */
+  margin: 10px 0 30px 0; /* Centers the image within its container */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #FFFFFF;
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.header .searchInput {
+  padding: 8px;
+  background-color: #252525;
+  border: 1px solid #4CAF50;
+  color: white;
+  margin-left: 600px; 
+  border-radius: 4px;
+  outline: none;
+  width: 200px; /* Fixed width or use max-width for responsiveness */
+}
+
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li a:hover {
+  text-decoration: none;
+}
+
+.header a:hover {
+  background-color: #367c39; /* Darker shade of green */
+}
+
+/* Main Content and Posts */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.post {
+  background-color: #1E1E1E;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+}
+
+.post .upvotes i {
+  cursor: pointer;
+}
+
+.post a {
+  color: #ffffff;
+}
+
+.postTitle a {
+  font-size: 30px; /* Larger font size for prominence */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #ffffff; /* Light color for contrast against dark background */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display to enhance clickable area */
+  margin-bottom: 5px; /* Margin for spacing */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.postTitle a:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+.postDetails {
+  margin-bottom: 5px;
+  color:#bbbbbb;
+}
+
+.upvotes {
+  display: block; /* Make upvotes display on its own line */
+  margin-top: 5px;
+}
+
+/* Comments */
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  background-color: #252525;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 3px solid #4CAF50;
+  color: #BBBBBB;
+}
+
+.comment p {
+  margin: 0;
+}
+
+/* Forms */
+.post-form,
+.add-comment {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #BBBBBB;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #252525;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: white;
+}
+
+.form-group button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #367c39;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #367c39;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header .searchInput {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+  }
+}
+
+/* Wrapper for custom select - to position the custom arrow */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Styles for select elements */
+.custom-select {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Custom arrow */
+.select-wrapper:after {
+  content: '▼';
+  color: #bbb;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.comments-section {
+  background-color: #222;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.comments-section h3 {
+  color: #FFF;
+  margin-bottom: 15px;
+}
+
+/* Section to add a new comment */
+.add-comment-section {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-form textarea,
+.comment-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #252525;
+  color: #FFF;
+}
+
+.comment-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+  background-color: #367C39;
+}
+
+/* Section to display existing comments */
+.existing-comments {
+  border-top: 1px solid #444; /* Visual separation */
+}
+
+.comment-item {
+  background-color: #1A1A1A;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #DDD;
+}
+
+.comment-item p {
+  margin: 0; /* Remove default margin from paragraphs */
+}
+
+/* Input and Button Styling */
+.input-group {
+  margin-bottom: 15px; /* Spacing between each input group */
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for better text visibility */
+  border: 2px solid #555; /* Slightly darker border for contrast */
+  background-color: #333; /* Dark background */
+  color: #FFF; /* Light text color */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 10px; /* Spacing between input elements */
+}
+
+.input-group textarea {
+  height: 100px; /* Fixed height for textareas */
+  resize: none; /* Disables resizing to maintain layout consistency */
+}
+
+.input-group button {
+  padding: 10px 20px;
+  border: none;
+  margin: 5px 5px 5px 0;
+  background-color: #4CAF50; /* Green background for primary actions */
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+  background-color: #367C39; /* Darker shade on hover */
+}
+
+.input-group .cancel-btn {
+  background-color: #BB2A2A; /* Red background for cancel actions */
+}
+
+.input-group .cancel-btn:hover {
+  background-color: #A52222; /* Darker red on hover */
+}
+
+.content-box {
+  background-color: #272727;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.title-section h2 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.content-section p, .content-section img {
+  margin-top: 10px;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
