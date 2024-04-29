@@ -28,7 +28,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] A custom CSS
+* [x] A custom CSS
 
 ## Video Walkthrough
 
